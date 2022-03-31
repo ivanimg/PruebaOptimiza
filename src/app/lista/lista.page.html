@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list padding>
+    <ion-item *ngFor="let item of lista.data">Objeto: {{item.title}} Visitas: {{item.visits}}</ion-item>
+  </ion-list>
+</ion-content>
