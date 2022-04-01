@@ -15,6 +15,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'modal-lista',
+    loadChildren: () => import('./modal-lista/modal-lista.module').then( m => m.ModalListaPageModule)
+  },
 ];
 
 @NgModule({

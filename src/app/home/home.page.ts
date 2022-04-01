@@ -20,9 +20,14 @@ export class HomePage {
 
   login(){
     console.log('user',this.usuario,'pass',this.password);
-    this.datosLogin = JSON.stringify({user:this.usuario,pass:this.password});
-    this.http.post('https://optimizaprocess.net/test/',this.datosLogin).subscribe(data=>{
-        console.log('data',data);
+    const formData = new FormData();
+    formData.append('user', this.usuario);
+    formData.append('pass', this.password);
+    this.http.post('https://optimizaprocess.net/test/',formData).subscribe(data=>{
+      // this.http.post('https://optimizaprocess.net/test/',formData).pipe(
+        // map((response) => {
+
+        // })
         // if(data.error === 0){
         if(data){
           this.router.navigate(['lista']);

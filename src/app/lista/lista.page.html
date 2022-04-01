@@ -6,6 +6,6 @@
 
 <ion-content>
   <ion-list padding>
-    <ion-item *ngFor="let item of lista.data">Objeto: {{item.title}} Visitas: {{item.visits}}</ion-item>
+    <ion-item *ngFor="let item of lista.data" (click)='openModal(item)'>Objeto: {{item.title}} Visitas: {{item.visits}}</ion-item>
   </ion-list>
 </ion-content>
